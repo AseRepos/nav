@@ -1,141 +1,177 @@
-:root {
-  --primary: #b6895b;
-  --bg: #010101;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  outline: none;
-  border: none;
-  text-decoration: none;
-}
-
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: var(--bg);
-  color: #fff;
+  font-family: "inter", "sans-serif";
+  line-height: 1.6;
+  color: #333;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  height: 1000vh;
 }
 
-/* Navbar */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: #222;
+}
+
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.4rem 7%;
-  background-color: rgba(1, 1, 1, 0.8);
-  border-bottom: 1px solid #513c28;
-  position: fixed;
+  background-color: rgba(107, 166, 255, 0.2);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, backdroup-filter 0.3s ease-in-out;
+}
+
+/* animasi */
+
+/*kondisi awal */
+.animate-fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* kondisi akhir */
+.animated {
+  opacity: 1;
+  transform: translate(0);
+}
+
+/* delay */
+.delay-1 {
+  transition-delay: 0.1s;
+}
+.delay-2 {
+  transition-delay: 0.2s;
+}
+.delay-3 {
+  transition-delay: 0.3s;
+}
+.delay-4 {
+  transition-delay: 0.4s;
+}
+.delay-5 {
+  transition-delay: 0.5s;
+}
+
+.satu {
+  margin-top: 5.1rem;
+  padding-top: 4rem;
+  background-color: #e2edff;
+}
+
+.dua {
+  margin-top: 0rem;
+  padding-top: 6rem;
+  background-color: #fff;
+}
+
+.jumbotron {
+  margin-top: 9rem;
+  padding-top: 2rem;
+  background-color: #e2edff;
+}
+.jumbotron1 {
+  margin-top: 0rem;
+  padding-top: 4rem;
+  background-color: #e2edff;
+}
+.album {
+  margin-top: 0rem;
+  padding-top: 6rem;
+  background-color: #e2edff;
+}
+.osk2026 {
+  background-color: #e2edff;
+}
+
+.fs-7 {
+  font-size: 0.75rem; /* Sekitar 12px */
+}
+
+.fs-8 {
+  font-size: 0.625rem; /* Sekitar 10px */
+}
+
+/* Custom CSS untuk efek hover pada tab */
+.nav-tabs .nav-link {
+  transition: all 0.3s ease;
+  color: #495057;
+  position: relative;
+}
+
+.nav-tabs .nav-link:hover {
+  color: #0d6efd;
+  background-color: rgba(13, 110, 253, 0.1);
+}
+
+.nav-tabs .nav-link:hover:not(.active) {
+  border-color: transparent;
+}
+
+/* Efek underline pada hover */
+.nav-tabs .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -1px;
+  left: 0;
+  background-color: #0d6efd;
+  transition: width 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Untuk tab aktif, pertahankan style Bootstrap default */
+.nav-tabs .nav-link.active {
+  color: #0d6efd;
+}
+
+/* Efek hover untuk card header */
+.card-header {
+  transition: background-color 0.3s ease;
+}
+
+.card:hover .card-header {
+  background-color: #f8f9fa;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+}
+.video-container video {
+  position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  z-index: 9999;
+  width: 100%;
+  height: 100%;
 }
 
-.navbar .navbar-logo {
-  font-size: 2rem;
-  font-weight: 700;
-  font-style: italic;
-  color: #fff;
+/* Styling tambahan untuk footer agar terlihat jelas */
+footer {
+  background-color: rgb(27, 148, 228); /* Warna latar belakang gelap */
+  color: white; /* Warna teks putih */
+  padding: 1rem 0; /* Padding atas dan bawah */
+  margin-top: 1rem; /* Jarak dari konten di atasnya */
 }
-
-.navbar .navbar-logo span {
-  color: var(--primary);
+.social-icons a {
+  color: white; /* Warna ikon putih */
+  font-size: 1.5rem; /* Ukuran ikon diperbesar */
+  margin: 0 15px; /* Jarak antar ikon diperlebar */
+  transition: color 0.3s ease, transform 0.3s ease; /* Transisi untuk warna dan ukuran */
+  display: inline-block; /* Penting untuk transform agar berfungsi baik */
 }
-
-.navbar .navbar-nav a {
-  color: #fff;
-  display: inline-block;
-  font-size: 1.3rem;
-  margin: 0 1rem;
-}
-
-.navbar .navbar-nav a:hover {
-  color: var(--primary);
-}
-
-.navbar .navbar-nav a::after {
-  content: "";
-  display: block;
-  padding-bottom: 0.5rem;
-  border-bottom: 0.1rem solid var(--primary);
-  transform: scaleX(0);
-  transition: 0.2s linear;
-}
-
-.navbar .navbar-nav a:hover::after {
-  transform: scaleX(0.5);
-}
-
-.navbar .navbar-extra a {
-  color: #fff;
-  margin: 0 0.5rem;
-}
-
-.navbar .navbar-extra a:hover {
-  color: var(--primary);
-}
-
-#hamburger-menu {
-  display: none;
-}
-
-/* Media Queries */
-
-/* Laptop */
-@media (max-width: 1366px) {
-  html {
-    font-size: 75%;
-    background-color: rgb(153, 105, 105);
-  }
-}
-
-/* Tablet */
-@media (max-width: 768px) {
-  html {
-    font-size: 62.5%;
-    background-color: rgb(175, 154, 38);
-  }
-}
-
-/* Handphone */
-@media (max-width: 450px) {
-  html {
-    font-size: 55%;
-    background-color: rgb(71, 151, 151);
-  }
-
-  #hamburger-menu {
-    display: inline-block;
-  }
-  .navbar .navbar-nav {
-    position: absolute;
-    top: 100%;
-    right: -100%;
-    background-color: #fff;
-    width: 20rem;
-    height: 100vh;
-    transition: 0.3s;
-  }
-
-  .navbar .navbar-nav.active {
-    right: 0;
-  }
-
-  .navbar .navbar-nav a {
-    color: var(--bg);
-    display: block;
-    margin: 1.5rem;
-    padding: 0.5rem;
-    font-size: 2rem;
-  }
-
-  .navbar .navbar-nav a::after {
-    transform-origin: 0 0;
-  }
-
-  .navbar .navbar-nav a:hover::after {
-    transform: scaleX(0.2);
-  }
+.social-icons a:hover {
+  color: #0d6efd; /* Warna ikon saat hover (biru Bootstrap primary) */
+  transform: scale(1.2); /* Memperbesar ikon 20% saat di-hover */
 }
