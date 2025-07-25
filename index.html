@@ -1,51 +1,445 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ChatBot Kuark</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CodeCanvas - OSK</title>
 
-    <!--    Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
-
-    <!-- Feather-Icons -->
-    <script src="https://unpkg.com/feather-icons"></script>
-
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
-  <body>
-    <!-- Navbar Start -->
-    <nav class="navbar">
-      <!-- <a href="#" class="navbar-logo">ChatBot <span>KUARK</span>.</a> -->
-      <a href="https://osk.web.id">
-        <img src="img/logo_osk.png" alt="logo_osk"
-      /></a>
 
-      <div class="navbar-nav">
-        <a href="#">Cover</a>
-        <a href="#about">Eksperimen</a>
-        <a href="#menu">Tanya Kuark</a>
+  <body data-bs-spy="scroll" data-bs-target="#main-nav" data-bs-offset="0" id="main-nav">
+    <!--- offcanvas -->
+    <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">OSK 2026</h5>
+        <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="close"></button>
       </div>
 
-      <div class="navbar-extra">
-        <!--        <a href="#" id="search"><i data-feather="search"></i></a>
-        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>-->
-        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" href="#hero">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Sekilas OSK</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#osk2026">OSK 2026</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tentang_kami">Tentang kami</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#album">Galery</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!--- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top p-1">
+      <div class="container">
+        <!-- <a class="navbar-brand fw-bold" href="#">OSK 2026</a>  -->
+
+        <a class="navbar-brand" href="#">
+          <img src="img/logo5.jpg" alt="logoosk" />
+        </a>
+
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#hero">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Sekilas OSK</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#osk2026">OSK 2026</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tentang_kami">Tentang kami</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#album">Galery</a>
+            </li>
+          </ul>
+        </div>
+
+        <a class="navbar-brand" href="#">
+          <img src="img/logokuark-h100-trans.png" alt="logoosk" width="auto" height="40" />
+        </a>
       </div>
     </nav>
-    <!-- Navnbar End -->
 
-    <!-- Feather icons -->
-    <script>
-      feather.replace();
-    </script>
+    <!--- Hero content -->
 
-    <!-- My Javascript -->
+    <header id="hero" class="satu text-center">
+      <!-- <div class="container">  -->
+      <img src="img/logo_osk.gif" alt="foto-1" width="15%" class="rounded-circle" />
+      <h1 class="display-6 fw-bold animate-fade-in-up">Hello, Sahabat <span class="text-primary">Kuark</span> !</h1>
+      <p class="animate-fade-in-up delay-1">Nantikan OSK 2026, tunggu Pendaftaran dibuka....</p>
+      <p class="mb-4 animate-fade-in-up delay-1">Sains Saat ini | Teknologi di masa depan</p>
+      <a href="" class="btn btn-primary btn-lg animate-fade-in-up delay-2">link PENDAFTARAN</a>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,160L60,165.3C120,171,240,181,360,165.3C480,149,600,107,720,117.3C840,128,960,192,1080,202.7C1200,213,1320,171,1380,149.3L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+        ></path>
+      </svg>
+      <!-- </div>  -->
+    </header>
+
+    <!-- About -->
+    <section id="about" class="dua text-center">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>Sekilas Olimpiade Sains Kuark</h2>
+          </div>
+        </div>
+
+        <div class="row justify-content-center fs-6 text-start">
+          <div class="col-sm mb-3">
+            <p>
+              Olimpiade Sains Kuark merupakan kompetisi sains Tingkat nasional diselenggarakan sejak tahun 2007 oleh PT Kuark Internasional dan telah diikuti oleh anak-anak dari berbagai kota dan kabupaten yang ada di Indonesia. Olimpiade
+              Sains Kuark atau dikenal sebagai OSK, bertujuan untuk: <br />
+              ➊ menumbuhkan rasa cinta sains pada anak sejak dini <br />
+              ➋ menggali potensi anak dan membangun rasa percaya diri pada anak <br />
+              ➌ mendorong anak untuk berprestasi, berkolaborasi serta menumbuhkan karakter pembelajar sepanjang hayat.
+            </p>
+          </div>
+
+          <div class="col-sm mb-3">
+            <img src="img/logo4-trans.png" alt="foto-1" width="auto" class="col-sm-6 float-sm-end mb-3 ms-md-3 rounded-circle" />
+            <p>
+              Olimpiade Sains Kuark memberi kesempatan yang sama bagi anak-anak Indonesia, dan terbuka bagi semua siswa SD/MI/Sederajat, tanpa syarat peringkat atau nilai tertentu. <br /><br />
+              Mari, bersama kita dukung dan siapkan anak-anak kita untuk terus belajar dan siap menghadapi tantangan zaman, menambah pengalaman, wawasan dan maju Bersama dengan ikut serta dalam Olimpiade Sains Kuark!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#e2edff"
+          fill-opacity="1"
+          d="M0,192L60,197.3C120,203,240,213,360,197.3C480,181,600,139,720,117.3C840,96,960,96,1080,106.7C1200,117,1320,139,1380,149.3L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- akhir about -->
+
+    <!-- OSK2026 -->
+    <section id="osk2026" class="jumbotron1 text-center">
+      
+      <div class="container mt-5">
+        <!-- <div class="card text-center col-md-10">  -->
+        <div class="card text-center">
+          <!-- Card Header dengan Navigasi -->
+          <div class="card-header">
+            <h5 class="card-title text-start">OSK 2026</h5>
+            <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="materi-tab" data-bs-toggle="tab" data-bs-target="#materi" type="button" role="tab" aria-controls="materi" aria-selected="true">Materi</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="jadwal-tab" data-bs-toggle="tab" data-bs-target="#jadwal" type="button" role="tab" aria-controls="jadwal" aria-selected="false">Jadwal</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="ketentuan-tab" data-bs-toggle="tab" data-bs-target="#ketentuan" type="button" role="tab" aria-controls="ketentuan" aria-selected="false">Ketentuan</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="kontak-tab" data-bs-toggle="tab" data-bs-target="#kontak" type="button" role="tab" aria-controls="kontak" aria-selected="false">Kontak</button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card Body dengan Konten -->
+          <div class="card-body">
+            <div class="tab-content" id="myTabContent">
+              <!-- Tab Materi -->
+              <div class="tab-pane fade show active" id="materi" role="tabpanel" aria-labelledby="materi-tab">
+                <h5 class="card-title">MATERI OSK 2026</h5>
+                <img src="img/materi-trans.png" style="width: 20%" class="card-img-top" alt="Materi OSK" />
+                <p class="card-text">Materi OSK 2026 untuk Level 1, Level 2 dan Level 3 adalah sebagai berikut:</p>
+                <ul style="list-style-type: none">
+                  <li>Babak Penyisihan: Komik Sains Kuark No: 40 - 50 New Normal.</li>
+                  <li>Babak Semifinal : Komik Sains Kuark No: 40 - 55 New Normal.</li>
+                  <li>Babak Final: Komik Sains Kuark No: 40 - 60 New Normal.</li>
+                </ul>
+              </div>
+
+              <!-- Tab Jadwal -->
+              <div class="tab-pane fade" id="jadwal" role="tabpanel" aria-labelledby="jadwal-tab">
+                <h5 class="card-title">JADWAL OSK 2026</h5>
+                <img src="img/jadwal2-trans.png" style="width: 20%" class="card-img-top" alt="Jadwal" />
+                <p class="card-text">Ini adalah konten untuk jadwal kelas.</p>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Hari</th>
+                      <th>Jam</th>
+                      <th>Mata Pelajaran</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Senin</td>
+                      <td>08:00 - 10:00</td>
+                      <td>Matematika</td>
+                    </tr>
+                    <tr>
+                      <td>Rabu</td>
+                      <td>10:00 - 12:00</td>
+                      <td>Bahasa Inggris</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Tab Ketentuan -->
+              <div class="tab-pane fade" id="ketentuan" role="tabpanel" aria-labelledby="ketentuan-tab">
+                <h5 class="card-title">KETENTUAN OSK 2026</h5>
+                <img src="img/ketentuan_osk_trans.png" style="width: 20%" class="card-img-top" alt="ketentuan OSK" />
+                <p class="card-text">Ini adalah konten untuk ketentuan kelas.</p>
+                <div class="alert alert-info"><strong>Perhatian!</strong> Harap membaca ketentuan dengan seksama.</div>
+              </div>
+
+              <!-- Tab Kontak -->
+              <div class="tab-pane fade" id="kontak" role="tabpanel" aria-labelledby="kontak-tab">
+                <h5 class="card-title">KONTAK PANITIA OSK 2026</h5>
+                <img src="img/kontak-trans.png" style="width: 40%" class="card-img-top" alt="Kontak" />
+
+                <p class="card-text">Ini adalah kontak panitia OSK 2026.</p>
+                <address>
+                  <strong>Email:</strong> pengajar@example.com<br />
+                  <strong>Telepon:</strong> (021) 123-4567
+                </address>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,96L60,106.7C120,117,240,139,360,149.3C480,160,600,160,720,138.7C840,117,960,75,1080,96C1200,117,1320,203,1380,245.3L1440,288L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+
+    <!-- Akhir OSK2026 -->
+
+    <!-- tentang kami -->
+    <section id="tentang_kami" class="dua text-center">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h3>PT. KUARK INTERNASIONAL</h3>
+          </div>
+        </div>
+    
+        <div class="row justify-content-center align-items-center fs-6 text-start">
+          <!-- Bagian Kiri (1/3) untuk gambar -->
+          <div class="col-lg-4 col-md-5 mb-3 d-flex justify-content-center">
+            <img src="img/beranda_04.gif" alt="tentang kami" class="img-fluid rounded-circle" style="max-height: 300px; width: auto;" />
+          </div>
+    
+          <!-- Bagian Kanan (2/3) untuk teks -->
+          <div class="col-lg-8 col-md-7 mb-2">
+            <p>
+              Tuntutan kebutuhan masyarakat akan pendidikan yang berkualitas dari hari ke hari semakin besar. Hal ini tentunya sangat menggembirakan mengingat pendidikan adalah salah satu kunci penting menuju Indonesia emas. Anak-anak sejak
+              usia dini sangat perlu untuk dilatih sistematika berpikir, kemampuan logika dasar dan kemampuan berpikir kritis.Kemampuan dasar ini dapat diasah melalui pelajaran sains. Tetapi, saat ini pelajaran sains sering dianggap sulit
+              dan membosankan. Sejak berdiri di tahun 2003, PT Kuark Internasional mempunyai visi untuk menjadi inovator terdepan penyedia sarana pendidikan yang diakui kemampuannya dalam menjadikan pendidikan menyatu dengan kehidupan. Visi
+              tersebut dicapai dengan misi sebagai berikut: <br />
+              <ul>
+                <li>Menciptakan media pendidikan yang menjadikan: Proses pembelajaran dapat menggugah peserta didik untuk memunculkan semua potensi terbaiknya. Hasil pembelajaran lebih berguna dan bermakna.</li>
+                <li>Menjadi mitra pilihan bagi lembaga dan kelompok masyarakat yang bercita-cita memajukan pendidikan.</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#e2edff"
+          fill-opacity="1"
+          d="M0,192L60,197.3C120,203,240,213,360,197.3C480,181,600,139,720,117.3C840,96,960,96,1080,106.7C1200,117,1320,139,1380,149.3L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- akhir tentang kami -->
+
+    <!-- Galery -->
+    <section id="album" class="album text-center">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <h2>GALERY OSK</h2>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-sm-4 mb-3">
+            <div class="card text-center text-bg-secondary">
+              <div class="card-body">
+                <img src="img/thumb04.png" style="width: 80%" class="card-img-top rounded-circle" alt="Thumb04" />
+                <h5 class="card-title">Awarding OSK 2024</h5>
+                <p class="card-text fs-7">Penganugerahan medali pemenang OSK 2024</p>
+      
+                <button type="button" class="btn btn-primary btn-play-video" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-src="img\testi.mp4" data-video-title="Awarding OSK 2024">Tonton Video 1</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <div class="card text-center text-bg-secondary">    
+              <div class="card-body">
+                <img src="img/thumb01.jpg" style="width: 80%" class="card-img-top rounded-circle" alt="Thumb01" />
+                <h5 class="card-title">KATA MEREKA</h5>
+                <p class="card-text fs-7">Pendapat mereka tentang OSK.</p>
+                <button type="button" class="btn btn-primary btn-play-video" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-src="img\testi.mp4" data-video-title="Pendapat mereka tentang OSK">Tonton Video 1</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <div class="card text-center text-bg-secondary">
+              
+              <div class="card-body">
+                <img src="img/thumb02.jpg" style="width: 75%" class="card-img-top rounded-circle" alt="Thumb02" />
+                <h5 class="card-title">Yakoba Saekoko,S.Pd.K</h5>
+                <p class="card-text fs-7">Yakoba Saekoko,S.Pd.K, Kepala UPTD SD Inpres Nunumeu Timor Tengah Selatan</p>
+                <button type="button" class="btn btn-primary btn-play-video" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-src="img\testi.mp4" data-video-title="Kepala UPTD SD Inpres Nunumeu Timor Tengah Selatan">Tonton Video 1</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <div class="card text-center text-bg-secondary">
+              
+              <div class="card-body">
+                <img src="img/thumb03.jpg" style="width: 80%" class="card-img-top rounded-circle"  alt="Thumb03" />
+                <h5 class="card-title">MICHAEL PURNAMA</h5>
+                <p class="card-text fs-7">Peraih GOLD MEDAL di IBO 2022</p>
+                <button type="button" class="btn btn-primary btn-play-video" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-src="img\testi.mp4" data-video-title="Peraih GOLD MEDAL di IBO 2022">Tonton Video 1</button>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,96L60,106.7C120,117,240,139,360,149.3C480,160,600,160,720,138.7C840,117,960,75,1080,96C1200,117,1320,203,1380,245.3L1440,288L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- end Galery -->
+
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="videoModalLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="video-container">
+              <video id="dynamicVideoPlayer" controls preload="auto" width="100%" height="auto">
+                <source id="videoSource" src="" type="video/mp4" />
+                Browser Anda tidak mendukung tag video.
+              </video>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+          <div class="row">
+              <div class="col-12 text-center">
+                  <p>&copy; 2025 PT. KUARK INTERNASIONAL penyelenggara Olimpiade Sains Kuark</p>
+                  <div class="social-icons mt-3">
+                      <a href="https://www.youtube.com/c/kuarktv" target="_blank" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                      <a href="https://www.instagram.com/kuark/?hl=id" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                      <a href="https://id-id.facebook.com/komikuark/" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                      <a href="https://www.komikuark.net/" target="_blank" aria-label="Website"><i class="bi bi-globe"></i></a>
+                      <a href="https://wa.me/6281350003928" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                  </div>
+                  <p class="mt-3">Jl. Pangeran Jayakarta No 103, Jakarta Pusat</p>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+
+    <script>
+      var videoModal = document.getElementById("videoModal");
+      var dynamicVideoPlayer = document.getElementById("dynamicVideoPlayer");
+      var videoSource = document.getElementById("videoSource");
+      var videoModalLabel = document.getElementById("videoModalLabel");
+
+      // Event listener saat modal akan ditampilkan
+      videoModal.addEventListener("show.bs.modal", function (event) {
+        // Dapatkan tombol yang memicu modal
+        var button = event.relatedTarget;
+
+        // Dapatkan data-video-src dan data-video-title dari tombol
+        var videoSrc = button.getAttribute("data-video-src");
+        var videoTitle = button.getAttribute("data-video-title");
+
+        // Setel src video dan judul modal
+        videoSource.src = videoSrc;
+        videoModalLabel.textContent = videoTitle; // Mengatur judul modal
+
+        // Memuat ulang video player untuk memutar video baru
+        dynamicVideoPlayer.load();
+        // dynamicVideoPlayer.play(); // Uncomment ini jika Anda ingin video otomatis putar saat modal dibuka
+      });
+
+      // Event listener saat modal ditutup
+      videoModal.addEventListener("hidden.bs.modal", function () {
+        // Jeda video saat modal ditutup
+        dynamicVideoPlayer.pause();
+        // Optional: Kembalikan video ke awal
+        dynamicVideoPlayer.currentTime = 0;
+        // Optional: Hapus src video untuk mencegah pemuatan ulang yang tidak perlu
+        // videoSource.src = '';
+        // dynamicVideoPlayer.load();
+      });
+    </script>
   </body>
 </html>
