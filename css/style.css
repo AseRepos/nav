@@ -161,8 +161,8 @@ h6 {
 footer {
   background-color: rgb(27, 148, 228); /* Warna latar belakang gelap */
   color: white; /* Warna teks putih */
-  padding: 1rem 0; /* Padding atas dan bawah */
-  margin-top: 1rem; /* Jarak dari konten di atasnya */
+  padding: 0rem 0; /* Padding atas dan bawah */
+  margin-top: 0rem; /* Jarak dari konten di atasnya */
 }
 .social-icons a {
   color: white; /* Warna ikon putih */
