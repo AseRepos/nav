@@ -175,3 +175,8 @@ footer {
   color: #0d6efd; /* Warna ikon saat hover (biru Bootstrap primary) */
   transform: scale(1.2); /* Memperbesar ikon 20% saat di-hover */
 }
+
+#osk2026 #materi ul li {
+  line-height: normal; /* Mengatur line-height ke nilai normal */
+  /* Atau coba nilai spesifik jika diperlukan, contoh: line-height: 1.5; */
+}
